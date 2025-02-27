@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <style>
+      :root {
+        font-family: IBM Plex Mono;
+        color-scheme: light dark
+      }
+
+      * {
+        position: relative;
+  	box-sizing: border-box;
+  	margin: 0;
+      }
+
+      ::selection {
+  	background-color: light-dark(#FFF, #000);
+  	color: light-dark(#000, #FFf)
+      }
+
+      body {
+  	background-color: light-dark(#000, #FFF);
+  	color: light-dark(#FFF, #000);
+  	margin: 1rem;
+  
+  	&:has(input[type="radio"][value="light"]:checked) {
+    	  color-scheme: dark;
+  	}
+  
+  	&:has(input[type="radio"][value="dark"]:checked) {
+    	  color-scheme: light;
+  	}
+      }
+
+      form {
+  	border: 1px solid light-dark(#FFF, #000);
+  	padding: 0.5rem;
+  
+  	label {
+    	  display: block;
+  	}
+      }
+
+      main {
+  	max-width: 400px
+      }
+
+      h1 {
+  	margin-bottom: 0.5rem;
+      }
+
+      blockquote p { font-size: 0.75rem; }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <form>
+        <h2>choose your life:</h2>
+        
+        <label> 
+          <input value="light" type="radio" name="theme" />
+          <span>light</span>
+        </label>
+        
+        <label>
+          <input value="dark" type="radio" name="theme" />
+          <span>dark</span>
+        </label>
+      </form>
+    
+      <h1>
+        tmrw, tmrw, tmrw
+      </h1>
+      
+      <blockquote>
+        <p>
+          We are all living, at most, half of a life, she thought. There was the life that you lived, which consisted of the choices you made. And then, there was the other life, the one that was the things you hadn’t chosen. And sometimes, this other life felt as palpable as the one you were living. Sometimes, it felt as if you might be walking down Brattle Street, and without warning, you could slip into this other life, like Alice falling down the rabbit hole that led to Wonderland. You would end up a different version of yourself, in some other town. But it wouldn’t be strange like Wonderland, not at all. Because you would have expected all along that it could have turned out that way. You would feel relief, because you had always wondered what that other life would have looked like. And there you were.
+        </p>
+      </blockquote>
+    </main>
+  </body>
+</html>
